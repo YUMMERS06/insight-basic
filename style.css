@@ -129,6 +129,7 @@ img {
   position: fixed;
   width: 100%;
   transform: translateY(5rem);
+  z-index: 999;
 }
 .header .header__nav ul {
   display: flex;
@@ -216,7 +217,7 @@ img {
 
 /* banner */
 .banner {
-  background-image: url("./img/banner-img.png");
+  background-image: url("img/banner-img.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -235,6 +236,7 @@ display: flex;
 gap: 5rem;
 margin-top:5rem;
 justify-content: center;
+
 }
 .banner .banner__btn a {
  width:20rem;
@@ -439,7 +441,7 @@ transition: 0.5s ease;
   color: var(--primary);
 }
 @media screen and (max-width:500px){
-  .contact .contacct__wrapper{
+  .contact .contact__wrapper{
     display: flex;
     flex-direction: column-reverse;
     gap:0rem;
@@ -490,6 +492,121 @@ flex:wrap;
       gap:4rem;
     }
   }
+
+  /* bannerA */
+  .bannerA {
+  background-image: url("img/banner-img (1).png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position: relative;
+}
+
+
+.bannerA h1{
+  color: var(--light);
+  font-size: 10rem;
+  max-width:100rem;
+  text-align:center;
+  letter-spacing:3rem;
+  font-weight: 100;
+}
+.bannerA a{
+color: var(--primary);
+font-size:3rem;
+position:absolute;
+bottom:3rem;
+}
+
+/* PACKAGES */
+.packages {
+    background: var(--dark);
+    position: relative;
+  }
+
+  .packages .packages__text{
+    color: var(--light);
+    margin:10rem;
+    display: flex;
+    gap: 10rem;
+    justify-content:space-between;
+    flex-direction: column;
+  }
+  
+  .packages h2 {
+    font-size: 10rem;
+    font-weight: 100;
+    max-width:70rem;
+  }
+
+  .packages .packages__item:nth-child(odd){
+    display:flex;
+    flex-direction:row;
+  }
+  .packages .packages__item:nth-child(even){
+    display:flex;
+    flex-direction:row-reverse;
+    margin-left:2rem;
+  }
+  .packages .packages__item a{
+    width: 12rem;
+  }
+  
+  .packages img{
+    width: 45%;
+  }
+  .packages .packages__text li{
+    fort-size: 2rem;
+    margin:3rem;  
+    height: 3rem;
+  }
+  @media screen  and (max-width:500px){
+.packages .packages__item:nth-child(odd){
+  display: flex;
+  flex-direction: column;
+ }
+ .packages .packages__item:nth-child(even){
+  display:flex;
+  flex-direction:column;
+  margin: 0;
+}
+.packages .packages__text{
+  color: var(--light);
+  margin: 8rem;
+  display: flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap: 3rem;
+  align-items:center;
+}
+.packages .packages__text h2{
+  font-size: 5rem;
+  font-weight: 100;
+  text-align: center;
+}
+.packages img{
+  width:100%;
+}
+.packages a{
+  width: 15rem;
+  font-size: 2rem;
+}
+.packages li{
+  font-size: 2rem;
+  height: 8rem;
+  list-style: disc;
+}
+.packages li::marker{
+  font-size:4rem;
+}
+}
+
+
+
 /* REPEATABLE PATTERS */
 :root {
   --primary: #fb4d3d;
